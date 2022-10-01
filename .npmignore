@@ -1,0 +1,7 @@
+example
+.idea
+node_modules/
+packages
+rollup.config.js
+tsconfig.json
+.npmignore

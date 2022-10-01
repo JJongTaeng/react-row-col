@@ -51,21 +51,15 @@ const ColumnContainer = styled__default["default"].div `
 const Row = ({ children, style, gutter = [0, 0], className }) => {
     console.log(className);
     const length = children === null || children === void 0 ? void 0 : children.length;
-    if (typeof children === 'string') {
-        throw new Error('A child of a <Row> component can only be a <Col> component.');
-    }
     if (length > 0) {
         const _children = children;
         return (React__default["default"].createElement(RowContainer, { style: style, className: className }, _children.map((child, index) => {
-            console.log(child === null || child === void 0 ? void 0 : child.type);
-            if ((child === null || child === void 0 ? void 0 : child.type) !== Col)
-                throw new Error('A child of a <Row> component can only be a <Col> component.');
+            // if (child?.type !== Col) throw new Error('A child of a <Row> component can only be a <Col> component.');
             return React__default["default"].cloneElement(child, { gutter, key: index });
         })));
     }
     else {
-        if ((children === null || children === void 0 ? void 0 : children.type) !== Col)
-            throw new Error('A child of a <Row> component can only be a <Col> component.');
+        // if (children?.type !== Col) throw new Error('A child of a <Row> component can only be a <Col> component.');
         return (React__default["default"].createElement(RowContainer, { style: style, className: className }, React__default["default"].cloneElement(children, { gutter })));
     }
 };

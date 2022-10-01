@@ -36,8 +36,7 @@ export default {
       include: /node_modules/
     }),
     typescript({
-      useTsconfigDeclarationDir: true,
-      tsconfig: 'tsconfig.json'
+      useTsconfigDeclarationDir: true
     }),
     image(),
   ],

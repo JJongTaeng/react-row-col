@@ -1,6 +1,4 @@
-import React from 'react';
-import './App.css';
-import { Col, Row } from "../../packages/src";
+import { Row, Col } from 'react-row-col';
 
 function App() {
   return (
