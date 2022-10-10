@@ -12,6 +12,10 @@ export interface RowProps {
 const Row = ({ children, style, gutter = [0, 0], className }: RowProps) => {
 	const length = children?.length;
 
+	if(!children) {
+		return null;
+	}
+
 	if (typeof children === 'string') {
 		throw new Error('A child of a <Row> component can only be a <Col> component.');
 	}
