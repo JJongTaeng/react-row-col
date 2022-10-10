@@ -40,6 +40,7 @@ const ColumnContainer = styled.div<ColumnWidthStyleType>`
   padding: ${({ gutter }) => `${gutter[0]}px ${gutter[1]}px`};
   @media (max-width: 576px) {
     & {
+      ${({ xs }) => xs === -1 ? 'display: none' : ''};
       width: ${({ xs, span, gutter }) => `calc(${xs ? xs * 4.166666 : span * 4.166666}% - ${gutter[1] * 2}px`});
     }
   }
