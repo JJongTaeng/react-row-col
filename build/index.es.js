@@ -5,7 +5,6 @@ const Col = ({ xxl, xl, lg, md, sm, xs, style, children, span = 24, gutter = [0,
     return (React.createElement(ColumnContainer, { gutter: gutter, xxl: xxl, xl: xl, lg: lg, md: md, sm: sm, xs: xs, span: span, style: style }, children));
 };
 const ColumnContainer = styled.div `
-	transition: .2s;
 	padding: ${({ gutter }) => `${gutter[0]}px ${gutter[1]}px`};
 	@media (max-width: 576px) {
 		& {
