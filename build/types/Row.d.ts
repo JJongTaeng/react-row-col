@@ -5,5 +5,5 @@ export interface RowProps {
     gutter?: [number, number];
     className?: string;
 }
-declare const Row: ({ children, style, gutter, className }: RowProps) => JSX.Element | null;
+declare const Row: ({ children, style, gutter, className }: RowProps) => JSX.Element;
 export default Row;
