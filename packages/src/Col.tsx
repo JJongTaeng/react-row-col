@@ -37,7 +37,6 @@ const Col = ({ xxl, xl, lg, md, sm, xs, style, children, span = 24, gutter = [0,
 };
 
 const ColumnContainer = styled.div<ColumnWidthStyleType>`
-	transition: .2s;
 	padding: ${({ gutter }) => `${gutter[0]}px ${gutter[1]}px`};
 	@media (max-width: 576px) {
 		& {
