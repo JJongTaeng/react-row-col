@@ -12,27 +12,25 @@ export interface RowProps {
 const Row = ({ children, style, gutter = [0, 0], className }: RowProps) => {
 	const length = children?.length;
 
-
-
 	if (typeof children === 'string') {
 		throw new Error('A child of a <Row> component can only be a <Col> component.');
 	}
 
+	if(length === 0) {
+		return <RowContainer style={style} className={className} />
+	}
+
 	if (length > 0) {
-		const _children = children;
 		return (
 			<RowContainer style={style} className={className}>
-				{_children.map((child: any, index: number) => {
-					if(!child) {
-						return null;
-					}
+				{children.map((child: any, index: number) => {
 					if (child?.type !== Col) throw new Error('A child of a <Row> component can only be a <Col> component.');
 					return React.cloneElement(child as any, { gutter, key: index });
 				})}
 			</RowContainer>
 		);
 	} else {
-		if (children?.type !== Col || !children) throw new Error('A child of a <Row> component can only be a <Col> component.');
+		if (children?.type !== Col) throw new Error('A child of a <Row> component can only be a <Col> component.');
 		return (
 			<RowContainer style={style} className={className}>
 				{React.cloneElement(children as any, { gutter })}
