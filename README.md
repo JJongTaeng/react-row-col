@@ -22,4 +22,4 @@ npm i react-row-col
    | `xxl`   | screen ≥ 1600px | could be a span value | number |
 
    - `span` props are ignored if props from `xs` to `xxl` are present.
-
+   - span value `-1` is "display: none"
