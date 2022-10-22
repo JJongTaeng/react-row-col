@@ -6,13 +6,16 @@ function App() {
   return (
     <div className="App">
       <Row gutter={[10, 10]}>
-        {false ? <Col span={8}>
           <BorderBox backgroundColor={'red'}>
             Hello
           </BorderBox>
-        </Col> : null}
         <Col span={8}>
           <BorderBox backgroundColor={'blue'}>
+            Hello
+          </BorderBox>
+        </Col>
+        <Col span={8}>
+          <BorderBox backgroundColor={'green'}>
             Hello
           </BorderBox>
         </Col>

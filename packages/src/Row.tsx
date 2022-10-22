@@ -7,7 +7,7 @@ export interface RowProps {
 	style?: React.CSSProperties;
 	gutter?: [number, number];
 	className?: string;
-	props: HTMLAttributes<HTMLDivElement>;
+	props?: HTMLAttributes<HTMLDivElement>;
 }
 
 const Row = ({ children, style, gutter = [0, 0], className, ...props }: RowProps) => {

@@ -26,7 +26,7 @@ interface ColumnWidthStyleType {
 export interface ColumnProps extends ColumnWidthType {
   children?: React.ReactNode;
   style?: React.CSSProperties;
-  props: HTMLAttributes<HTMLDivElement>;
+  props?: HTMLAttributes<HTMLDivElement>;
 }
 
 const Col = ({ xxl, xl, lg, md, sm, xs, style, children, span = 24, gutter = [0, 0], ...props }: ColumnProps) => {
