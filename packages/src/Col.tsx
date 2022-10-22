@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { HTMLAttributes } from 'react';
 import styled from 'styled-components';
 
 interface ColumnWidthType {
@@ -26,11 +26,12 @@ interface ColumnWidthStyleType {
 export interface ColumnProps extends ColumnWidthType {
   children?: React.ReactNode;
   style?: React.CSSProperties;
+  props: HTMLAttributes<HTMLDivElement>;
 }
 
-const Col = ({ xxl, xl, lg, md, sm, xs, style, children, span = 24, gutter = [0, 0] }: ColumnProps) => {
+const Col = ({ xxl, xl, lg, md, sm, xs, style, children, span = 24, gutter = [0, 0], ...props }: ColumnProps) => {
   return (
-    <ColumnContainer gutter={gutter} xxl={xxl} xl={xl} lg={lg} md={md} sm={sm} xs={xs} span={span} style={style}>
+    <ColumnContainer gutter={gutter} xxl={xxl} xl={xl} lg={lg} md={md} sm={sm} xs={xs} span={span} style={style} {...props}>
       {children}
     </ColumnContainer>
   );
