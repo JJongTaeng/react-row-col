@@ -3,7 +3,10 @@
 npm i react-row-col
 ```
 
+
 # Usage
+[example link](https://jjongtaeng.github.io/react-row-col/?path=/story/example-introduction--page)
+
 1. Row
    - The Row component wraps the Col component and has gutter props.
    - The gutter props pass an array, and [10, 20] sets the padding of the Col component to top, bottom 10px, left, right 20px.
