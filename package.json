@@ -1,6 +1,6 @@
 {
   "name": "react-row-col",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "react grid layout components library",
   "keywords": [
     "row",
@@ -14,7 +14,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc --emitDeclarationOnly & rollup -c",
-    "prebuild": "rimraf ./build"
+    "prebuild": "rimraf ./build",
+    "deploy:npm": "npm run build & npm publish",
+    "move": "cp -R ./example/src/components/* ./packages/src"
   },
   "author": {
     "name": "JJongTaeng",

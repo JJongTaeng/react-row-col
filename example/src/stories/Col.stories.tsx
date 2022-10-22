@@ -1,7 +1,7 @@
 import React from 'react';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
-import Row from './Row';
-import Col from './Col';
+import Row from '../components/Row';
+import Col from '../components/Col';
 
 export default {
   title: 'Example/Col',
